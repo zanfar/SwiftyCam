@@ -62,6 +62,7 @@ import CoreMotion
     }
     
     func getPreviewLayerOrientation() -> AVCaptureVideoOrientation {
+        return AVCaptureVideoOrientation.landscapeLeft
         // Depends on layout orientation, not device orientation
         switch UIApplication.shared.statusBarOrientation {
         case .portrait, .unknown:
