@@ -155,7 +155,7 @@ import AVFoundation
 
     /// Sets whether or not View Controller supports auto rotation
 
-    public var allowAutoRotate                = false
+    public var allowAutoRotate                = true
 
     /// Specifies the [videoGravity](https://developer.apple.com/reference/avfoundation/avcapturevideopreviewlayer/1386708-videogravity) for the preview layer.
     public var videoGravity                   : SwiftyCamVideoGravity = .resizeAspect
