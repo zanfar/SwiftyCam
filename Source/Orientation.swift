@@ -80,9 +80,9 @@ import CoreMotion
         
         switch deviceOrientation {
         case .landscapeLeft:
-            return .landscapeLeft
-        case .landscapeRight:
             return .landscapeRight
+        case .landscapeRight:
+            return .landscapeLeft
         case .portraitUpsideDown:
             return .portraitUpsideDown
         default:
