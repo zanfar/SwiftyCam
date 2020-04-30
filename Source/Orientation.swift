@@ -48,12 +48,23 @@ import CoreMotion
     
     func getImageOrientation(forCamera: SwiftyCamViewController.CameraSelection) -> UIImage.Orientation {
         guard shouldUseDeviceOrientation, let deviceOrientation = self.deviceOrientation else { return forCamera == .rear ? .right : .leftMirrored }
-        
+        /*
         switch deviceOrientation {
         case .landscapeLeft:
             return forCamera == .rear ? .up : .downMirrored
         case .landscapeRight:
             return forCamera == .rear ? .down : .upMirrored
+        case .portraitUpsideDown:
+            return forCamera == .rear ? .left : .rightMirrored
+        default:
+            return forCamera == .rear ? .right : .leftMirrored
+        }
+        */
+        switch deviceOrientation {
+        case .landscapeLeft:
+            return forCamera == .rear ? .left : .rightMirrored
+        case .landscapeRight:
+            return forCamera == .rear ? .right : .leftMirrored
         case .portraitUpsideDown:
             return forCamera == .rear ? .left : .rightMirrored
         default:
